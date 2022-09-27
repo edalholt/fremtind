@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import Reiseforsikring from '../components/reiseforsikring'
+import Reiseforsikring from '../components/Reiseforsikring'
 
 const Home: NextPage = () => {
   return (
