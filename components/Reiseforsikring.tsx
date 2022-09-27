@@ -1,9 +1,17 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
 const Reiseforsikring: NextPage = () => {
+
+    const customer = {
+        name: "Per Andreas Hansen",
+        contract: 123456789,
+        monthlyPrice: 249,
+        from_date: "01.01.2021",
+        end_date: "01.01.2022",
+        contract_pdf: "/avtale.pdf"
+    }
 
   return (
     <div className={styles.container}>
@@ -18,25 +26,25 @@ const Reiseforsikring: NextPage = () => {
         <h2 className={styles.title}>
         Reiseforsikring
         </h2>
-        <p>Per Andreas Hansen</p>
+        <p>{customer.name}</p>
         </div>
 
         <div className={styles.fakturaoversikt}>
             <div className={styles.fakturaTop}>
-            <h4>Du betaler 249 kr/mnd</h4>
+            <h4>Du betaler {customer.monthlyPrice} kr/mnd</h4>
             <p>Fakturaoversikt</p>
             </div>
             <div className={styles.fakturaLine}>
                 <h5>Periode</h5>
-                <p>01.01.2021 - 01.01.2022</p>
+                <p>{customer.from_date} - {customer.end_date}</p>
             </div>
             <div className={styles.fakturaLine}>
                 <h5>Avtalenummer</h5>
-                <p>1234567789</p>
+                <p>{customer.contract}</p>
             </div>
             <div className={styles.fakturaLine}>
                 <h5>Dokument</h5>
-                <a>Avtaledokument (PDF)</a>
+                <a href={customer.contract_pdf} target={"_blank"}>Avtaledokument (PDF)</a>
             </div>
         </div>
         <div className={styles.coverIMG}/>
