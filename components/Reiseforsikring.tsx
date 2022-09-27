@@ -44,7 +44,7 @@ const Reiseforsikring: NextPage = () => {
             </div>
             <div className={styles.fakturaLine}>
                 <h5>Dokument</h5>
-                <a href={customer.contract_pdf} target={"_blank"}>Avtaledokument (PDF)</a>
+                <a href={customer.contract_pdf} rel="noreferrer" target={"_blank"}>Avtaledokument (PDF)</a>
             </div>
         </div>
         <div className={styles.coverIMG}/>
