@@ -1,8 +1,10 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import { useRouter } from "next/router";
 
 const Reiseforsikring: NextPage = () => {
+  const router = useRouter();
 
     const customer = {
         name: "Per Andreas Hansen",
@@ -32,7 +34,7 @@ const Reiseforsikring: NextPage = () => {
         <div className={styles.fakturaoversikt}>
             <div className={styles.fakturaTop}>
             <h4>Du betaler {customer.monthlyPrice} kr/mnd</h4>
-            <p>Fakturaoversikt</p>
+            <p style={{cursor: "pointer"}} onClick={() => router.push('/faktura')}>Fakturaoversikt →</p>
             </div>
             <div className={styles.fakturaLine}>
                 <h5>Periode</h5>
@@ -44,7 +46,7 @@ const Reiseforsikring: NextPage = () => {
             </div>
             <div className={styles.fakturaLine}>
                 <h5>Dokument</h5>
-                <a href={customer.contract_pdf} rel="noreferrer" target={"_blank"}>Avtaledokument (PDF)</a>
+                <a href={customer.contract_pdf} rel="noreferrer" target={"_blank"}>Avtaledokument (PDF) ↗</a>
             </div>
         </div>
         <div className={styles.coverIMG}/>
