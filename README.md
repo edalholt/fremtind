@@ -1,34 +1,22 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
-
-First, run the development server:
+## Hvordan kjøre appen
 
 ```bash
+# Install dependencies
+npm i
+# Run server
 npm run dev
-# or
-yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Du finner så serveren kjørende på [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Oppgaver:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+[Case - PDF](Utviklingscase.pdf)
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+1. Sikkerhet:  
+Tjenesten inneholder en del persondata, og jeg tror derfor det er implementert HTTPS slik at data blir ikke blir sent til bruker i klartekst. PDF-en bør lagres på en trygg måte, hvor linkene ikke kan tukles med for å aksessere andre brukere sine avtaledokument. Eksempel på dette er å generere en «blob»-link eller tilsvarende når brukeren ønsker å laste ned filen.
+Da siden inneholder persondata tror jeg det også er tenkt en innlogging, om det lagres en token bør denne lagres et annet sted en for eksempel i localstorage.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+3. Universell utforming:  
+For å ivareta universell utforming tror jeg at utviklerne har valgt en font og tekstfarge til bakgrunnen som er mulig å lese for personer med ulike synshemminger. Klikkbare elementer følger et gitt mønster, slik at det er intuitivt at man for eksempel kan klikke på Avtaledokumentet for å komme til dokumentet. Selv om alle klikkabare elementer inneholder piler synes jeg derimot ikke at det var like intuitivt at "fakturaoversikt" er klikkbar, og kunne med fordel vært understreket som PDF-linken, eller være formet som en knapp.
