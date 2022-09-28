@@ -48,7 +48,7 @@
 .coverIMG {
   width: 25rem;
   height: 25rem;
-  background-image: url("/cover.jpg");
+  background-image: url("/cover.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
 }
