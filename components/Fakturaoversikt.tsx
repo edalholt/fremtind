@@ -51,7 +51,7 @@ const Fakturaoversikt: NextPage = () => {
                 <p>Beløp:</p>
             </div>
             {customer_data.paid.map(payment => (
-            <div className={styles.fakturaLine}>
+            <div key={payment.date} className={styles.fakturaLine}>
                 <h5>{payment.date}</h5>
                 <p>{payment.amount} kr</p>
             </div>
