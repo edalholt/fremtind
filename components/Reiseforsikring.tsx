@@ -34,7 +34,7 @@ const Reiseforsikring: NextPage = () => {
         <div className={styles.fakturaoversikt}>
             <div className={styles.fakturaTop}>
             <h4>Du betaler {customer.monthlyPrice} kr/mnd</h4>
-            <p style={{cursor: "pointer"}} onClick={() => router.push('/faktura')}>Fakturaoversikt →</p>
+            <p className={styles.link} onClick={() => router.push('/faktura')}>Fakturaoversikt →</p>
             </div>
             <div className={styles.fakturaLine}>
                 <h5>Periode</h5>

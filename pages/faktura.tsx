@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import Fakturaoversikt from '../components/Fakturaoversikt'
 
-const Home: NextPage = () => {
+const Faktura: NextPage = () => {
   return (
     <>
     <Fakturaoversikt/>
@@ -9,4 +9,4 @@ const Home: NextPage = () => {
   )
 }
 
-export default Home
+export default Faktura

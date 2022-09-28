@@ -34,7 +34,7 @@ const Fakturaoversikt: NextPage = () => {
 
       <main className={styles.main}>
         <div className={styles.top}>
-        <p style={{cursor: "pointer"}} onClick={() => router.push('/')}>← Tilbake</p>
+        <p className={styles.link} onClick={() => router.push('/')}>← Tilbake</p>
         <h2 className={styles.title}>
         Fakturaoversikt
         </h2>
